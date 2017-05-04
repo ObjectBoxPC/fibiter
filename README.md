@@ -21,3 +21,21 @@ Output:
 3
 5
 ```
+
+```rust
+let l = fibiter::LucasIterator::new();
+
+for x in l.take(5) {
+	println!("{}", x);
+}
+```
+
+Output:
+
+```
+2
+1
+3
+4
+7
+```
