@@ -21,7 +21,7 @@ impl Iterator for LucasIterator {
 
 #[cfg(test)]
 mod tests {
-#[test]
+	#[test]
 	fn gives_correct_values() {
 		let f = super::LucasIterator::new();
 		let expected = [2, 1, 3, 4, 7, 11, 18, 29];

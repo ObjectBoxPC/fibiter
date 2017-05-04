@@ -21,7 +21,7 @@ impl Iterator for FibonacciIterator {
 
 #[cfg(test)]
 mod tests {
-#[test]
+	#[test]
 	fn gives_correct_values() {
 		let f = super::FibonacciIterator::new();
 		let expected = [1, 1, 2, 3, 5, 8, 13, 21];
