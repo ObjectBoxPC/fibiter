@@ -1,5 +1,6 @@
 use basic_lucas_seq::BasicLucasSeqIterator;
 
+/// Iterator that gives Fibonacci numbers
 #[derive(Debug, Clone)]
 pub struct FibonacciIterator {
 	basic_lucas: BasicLucasSeqIterator,

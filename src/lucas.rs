@@ -1,5 +1,6 @@
 use basic_lucas_seq::BasicLucasSeqIterator;
 
+/// Iterator that gives Lucas numbers
 #[derive(Debug, Clone)]
 pub struct LucasIterator {
 	basic_lucas: BasicLucasSeqIterator,
