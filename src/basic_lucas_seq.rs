@@ -30,3 +30,23 @@ impl Iterator for BasicLucasSeqIterator {
 		Some(self.current)
 	}
 }
+
+#[cfg(test)]
+mod tests {
+	#[test]
+	fn gives_initial_values() {
+		assert_correct_initial_values(0, 0);
+		assert_correct_initial_values(1, 1);
+		assert_correct_initial_values(1, 2);
+		assert_correct_initial_values(1, -1);
+		assert_correct_initial_values(-1, 1);
+	}
+
+	fn assert_correct_initial_values(first: i64, second: i64) {
+		let expected = [first, second, first + second];
+		let iter = super::BasicLucasSeqIterator::new(first, second);
+		for (e, a) in expected.iter().zip(iter) {
+			assert_eq!(*e, a);
+		}
+	}
+}
