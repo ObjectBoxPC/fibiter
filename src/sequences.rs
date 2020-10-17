@@ -44,70 +44,70 @@ mod tests {
 	use std::iter::Iterator;
 
 	#[test]
-	fn fibonacci_gives_correct_values() {
-		assert_correct_values(
+	fn fibonacci_gives_initial_values() {
+		assert_initial_values(
 			&[1, 1, 2, 3, 5, 8, 13, 21, 34, 55],
 			super::fibonacci(),
 		);
 	}
 
 	#[test]
-	fn fibonacci_zero_gives_correct_values() {
-		assert_correct_values(
+	fn fibonacci_zero_gives_initial_values() {
+		assert_initial_values(
 			&[0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
 			super::fibonacci_zero(),
 		);
 	}
 
 	#[test]
-	fn lucas_numbers_gives_correct_values() {
-		assert_correct_values(
+	fn lucas_numbers_gives_initial_values() {
+		assert_initial_values(
 			&[2, 1, 3, 4, 7, 11, 18, 29, 47, 76],
 			super::lucas_numbers(),
 		);
 	}
 
 	#[test]
-	fn pell_gives_correct_values() {
-		assert_correct_values(
+	fn pell_gives_initial_values() {
+		assert_initial_values(
 			&[0, 1, 2, 5, 12, 29, 70, 169, 408, 985],
 			super::pell(),
 		);
 	}
 
 	#[test]
-	fn jacobsthal_gives_correct_values() {
-		assert_correct_values(
+	fn jacobsthal_gives_initial_values() {
+		assert_initial_values(
 			&[0, 1, 1, 3, 5, 11, 21, 43, 85, 171],
 			super::jacobsthal(),
 		);
 	}
 
 	#[test]
-	fn lucas_first_gives_correct_values() {
-		assert_correct_values(
+	fn lucas_first_gives_initial_values() {
+		assert_initial_values(
 			&[0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
 			super::lucas_first(1, -1),
 		);
-		assert_correct_values(
+		assert_initial_values(
 			&[0, 1, 2, 5, 12, 29, 70, 169, 408, 985],
 			super::lucas_first(2, -1),
 		);
 	}
 
 	#[test]
-	fn lucas_second_gives_correct_values() {
-		assert_correct_values(
+	fn lucas_second_gives_initial_values() {
+		assert_initial_values(
 			&[2, 1, 3, 4, 7, 11, 18, 29, 47, 76],
 			super::lucas_second(1, -1),
 		);
-		assert_correct_values(
+		assert_initial_values(
 			&[2, 2, 6, 14, 34, 82, 198, 478, 1154, 2786],
 			super::lucas_second(2, -1),
 		);
 	}
 
-	fn assert_correct_values<T>(expected: &[i64], actual: T)
+	fn assert_initial_values<T>(expected: &[i64], actual: T)
 		where T: Iterator<Item = i64> {
 		for (e, a) in expected.iter().zip(actual) {
 			assert_eq!(*e, a);

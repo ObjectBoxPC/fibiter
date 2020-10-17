@@ -44,13 +44,13 @@ impl Iterator for RecursiveSequenceIterator {
 mod tests {
 	#[test]
 	fn gives_initial_values() {
-		assert_correct_initial_values(0, 1, 1, 2);
-		assert_correct_initial_values(0, 1, 3, 4);
-		assert_correct_initial_values(2, 1, 1, 2);
-		assert_correct_initial_values(2, 3, 3, 4);
+		assert_initial_values(0, 1, 1, 2);
+		assert_initial_values(0, 1, 3, 4);
+		assert_initial_values(2, 1, 1, 2);
+		assert_initial_values(2, 3, 3, 4);
 	}
 
-	fn assert_correct_initial_values(first: i64, second: i64, p: i64, q: i64) {
+	fn assert_initial_values(first: i64, second: i64, p: i64, q: i64) {
 		let expected = [
 			first,
 			second,
