@@ -5,7 +5,7 @@ Simple iterators in Rust that give Fibonacci numbers and other Lucas sequences
 ## Examples
 
 ```rust
-let f = fibiter::FibonacciIterator::new();
+let f = fibiter::fibonacci();
 
 for x in f.take(5) {
 	println!("{}", x);
@@ -23,7 +23,7 @@ Output:
 ```
 
 ```rust
-let l = fibiter::LucasIterator::new();
+let l = fibiter::lucas_numbers();
 
 for x in l.take(5) {
 	println!("{}", x);
